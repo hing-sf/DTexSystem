@@ -5,16 +5,16 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { FC } from 'react';
-import Row from './Rows';
+import Row from './Row';
 import { StyledTableHeaderCell } from './styles';
 import { Employee } from './types';
 
-type EmployeeProps = {
+type ExpandableTableProps = {
 	headerNames: string[];
 	rows: Employee[];
 };
 
-const EmployeeTable: FC<EmployeeProps> = ({ headerNames, rows }) => {
+const ExpandableTable: FC<ExpandableTableProps> = ({ headerNames, rows }) => {
 	return (
 		<TableContainer
 			component={Paper}
@@ -39,4 +39,4 @@ const EmployeeTable: FC<EmployeeProps> = ({ headerNames, rows }) => {
 	);
 };
 
-export default EmployeeTable;
+export default ExpandableTable;

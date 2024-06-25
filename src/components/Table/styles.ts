@@ -16,7 +16,7 @@ export const StyledTableHeaderCell = styled(TableCell)(() => ({
 
 export const StyledTableCell = styled(TableCell)(() => ({
 	[`&.${tableCellClasses.root}`]: {
-		padding: '0.75rem',
+		padding: '0.75rem 1rem',
 		borderBottom: 'none'
 	}
 }));

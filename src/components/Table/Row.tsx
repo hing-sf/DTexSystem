@@ -7,24 +7,22 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import TableCell from '@mui/material/TableCell';
 import Typography from '@mui/material/Typography';
-import * as React from 'react';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { StyledTableCell, StyledTableRow } from './styles';
 import { Employee } from './types';
-
 
 type RowProps = { row: Employee };
 
 const Row: FC<RowProps> = ({ row }) => {
-	const [open, setOpen] = React.useState(false);
+	const [open, setOpen] = useState(false);
 
 	return (
-		<React.Fragment>
+		<>
 			<StyledTableRow>
 				<StyledTableCell>
 					<Stack direction='row' spacing={1} sx={{ display: 'flex', alignItems: 'center' }}>
 						<MoodIcon />
-						<ListItemText id={row.name} primary={`Line item ${row.name}`} />
+						<ListItemText id={row.name} primary={row.name} />
 					</Stack>
 				</StyledTableCell>
 				<StyledTableCell>{row.employmentId}</StyledTableCell>
@@ -48,8 +46,8 @@ const Row: FC<RowProps> = ({ row }) => {
 					</Collapse>
 				</TableCell>
 			</StyledTableRow>
-		</React.Fragment>
+		</>
 	);
 };
 
-export default Row
+export default Row;

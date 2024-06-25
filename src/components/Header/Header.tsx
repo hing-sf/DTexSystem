@@ -1,8 +1,8 @@
-// import { AppBar, Toolbar, Typography } from '@mui/material';
 import { Typography } from '@mui/material';
+import { FC } from 'react';
 import { StyledBoxBanner } from '../../pages/styles';
 
-export default function Header() {
+const Header: FC = () => {
 	return (
 		<StyledBoxBanner component='header'>
 			<Typography variant='h6' component='p'>
@@ -11,3 +11,5 @@ export default function Header() {
 		</StyledBoxBanner>
 	);
 }
+
+export default Header;

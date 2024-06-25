@@ -1,6 +1,7 @@
 import { Box, CircularProgress } from '@mui/material';
+import { FC } from 'react';
 
-export default function Loading() {
+const Loading: FC = () => {
 	return (
 		<Box
 			sx={{ display: 'flex', minHeight: '200px', justifyContent: 'center', alignItems: 'center' }}
@@ -9,3 +10,4 @@ export default function Loading() {
 		</Box>
 	);
 }
+export default Loading;

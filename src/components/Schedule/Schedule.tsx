@@ -1,7 +1,8 @@
 import { Typography } from '@mui/material';
+import { FC } from 'react';
 import { StyledBox } from '../../pages/styles';
 
-export default function Schedule() {
+ const Schedule: FC = () => {
 	return (
 		<StyledBox>
 			<Typography variant='h6' component='p'>
@@ -10,3 +11,5 @@ export default function Schedule() {
 		</StyledBox>
 	);
 }
+
+export default Schedule;

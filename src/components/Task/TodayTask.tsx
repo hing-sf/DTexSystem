@@ -1,7 +1,8 @@
 import { Typography } from '@mui/material';
+import { FC } from 'react';
 import { StyledBox } from '../../pages/styles';
 
-export default function TodayTask() {
+const TodayTask: FC = () => {
 	return (
 		<StyledBox>
 			<Typography variant='h6' component='p'>
@@ -10,3 +11,5 @@ export default function TodayTask() {
 		</StyledBox>
 	);
 }
+
+export default TodayTask

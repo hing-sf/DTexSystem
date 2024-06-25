@@ -1,7 +1,8 @@
 import { Typography } from '@mui/material';
+import { FC } from 'react';
 import { StyledBoxBanner } from '../../pages/styles';
 
-export default function Payrolls() {
+const Payrolls: FC = () => {
 	return (
 		<StyledBoxBanner component='div'>
 			<Typography variant='h6' component='p'>
@@ -10,3 +11,4 @@ export default function Payrolls() {
 		</StyledBoxBanner>
 	);
 }
+export default Payrolls;

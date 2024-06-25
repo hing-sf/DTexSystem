@@ -7,10 +7,11 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
+import { FC } from 'react';
 
 export const DRAWER_WIDTH = 240;
 
-export default function SideNav() {
+ const SideNav: FC = () => {
 	return (
 		<Drawer
 			sx={{
@@ -54,3 +55,5 @@ export default function SideNav() {
 		</Drawer>
 	);
 }
+
+export default SideNav;
