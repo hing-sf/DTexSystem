@@ -11,7 +11,7 @@ import TodayTask from '../components/Task/TodayTask';
 import { MainGridContainer, SectionHeader } from './styles';
 
 const Main: FC = () => {
-	const [expanded, setExpanded] = useState<string | false>('panel1');
+	const [expanded, setExpanded] = useState<string | false>('employeePanel');
 
 	const { isLoading, employeeRows, headerNames } = useEmployeeTable();
 
@@ -35,7 +35,7 @@ const Main: FC = () => {
 			</Grid>
 
 			<Grid item xs={12}>
-				<Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+				<Accordion expanded={expanded === 'employeePanel'} onChange={handleChange('employeePanel')}>
 					<AccordionSummary
 						expandIcon={<ExpandMoreIcon />}
 						aria-controls='employees-content'

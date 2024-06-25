@@ -28,7 +28,6 @@ const useEmployeeTable = () => {
 	return {
 		isLoading,
 		employeeRows,
-		// handleFetchEmployees,
 		headerNames
 	};
 };
