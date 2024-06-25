@@ -5,7 +5,7 @@ import Header from '../components/Header/Header';
 import Loading from '../components/Loading/Loading';
 import Payroll from '../components/Payroll/Payroll';
 import Schedule from '../components/Schedule/Schedule';
-import EmployeeTable from '../components/Table/ExpandableTable';
+import ExpandableTable from '../components/Table/ExpandableTable';
 import useEmployeeTable from '../components/Table/useEmployeeTable';
 import TodayTask from '../components/Task/TodayTask';
 import { MainGridContainer, SectionHeader } from './styles';
@@ -47,7 +47,7 @@ const Main: FC = () => {
 						{isLoading ? (
 							<Loading />
 						) : (
-							<EmployeeTable headerNames={headerNames} rows={employeeRows} />
+							<ExpandableTable headerNames={headerNames} rows={employeeRows} />
 						)}
 					</Box>
 				</Accordion>
