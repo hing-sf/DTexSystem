@@ -5,18 +5,13 @@ import { ListItemText, Stack } from '@mui/material';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
-import Paper from '@mui/material/Paper';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { FC } from 'react';
-import { StyledTableCell, StyledTableHeaderCell, StyledTableRow } from './styles';
+import { StyledTableCell, StyledTableRow } from './styles';
 import { Employee } from './types';
+
 
 type RowProps = { row: Employee };
 
@@ -57,34 +52,4 @@ const Row: FC<RowProps> = ({ row }) => {
 	);
 };
 
-type EmployeeProps = {
-	headerNames: string[];
-	rows: Employee[];
-};
-
-const Employees: FC<EmployeeProps> = ({ headerNames, rows }) => {
-	return (
-		<TableContainer
-			component={Paper}
-			sx={{
-				boxShadow:
-					'boxShadow: 0px 0px 0px 0px rgba(0,0,0,0.2),0px -1px 0px 1px rgba(0,0,0,0.14),0px 0px 0px 0px rgba(0,0,0,0.12)',
-				mb: 1
-			}}
-		>
-			<Table aria-label='collapsible table'>
-				<TableHead>
-					<TableRow>
-						{headerNames.map((name) => (
-							<StyledTableHeaderCell key={name}>{name}</StyledTableHeaderCell>
-						))}
-						<StyledTableHeaderCell />
-					</TableRow>
-				</TableHead>
-				<TableBody>{rows && rows.map((row) => <Row key={row.name} row={row} />)}</TableBody>
-			</Table>
-		</TableContainer>
-	);
-};
-
-export default Employees;
+export default Row

@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { Employee, RoleType, StatusType } from '../components/Employees/types';
+import { Employee, RoleType, StatusType } from '../components/EmployeeTable/types';
 
 const DELAY = 1000; // ms
 

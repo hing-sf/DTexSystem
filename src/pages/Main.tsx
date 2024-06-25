@@ -2,8 +2,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Accordion, AccordionSummary, Box, Grid } from '@mui/material';
 import { FC, useEffect, useState } from 'react';
 import { MIN_VIEWPORT_WIDTH } from '../App';
-import Employees from '../components/Employees/Employees';
-import { Employee } from '../components/Employees/types';
+import EmployeeTable from '../components/EmployeeTable/EmployeeTable';
+import { Employee } from '../components/EmployeeTable/types';
 import Header from '../components/Header/Header';
 import Loading from '../components/Loading/Loading';
 import { DRAWER_WIDTH } from '../components/Nav/SideNav';
@@ -28,7 +28,7 @@ const Main: FC = () => {
 			const response = await fetchEmployees(10);
 			setEmployeeRows(response);
 		} catch (error) {
-			// do something here, maybe log to Sentry
+			// log error to service like Sentry
 			console.log('error', error);
 		} finally {
 			setIsLoading(false);
@@ -66,7 +66,7 @@ const Main: FC = () => {
 						<SectionHeader>Employees</SectionHeader>
 					</AccordionSummary>
 					<Box>
-						{isLoading ? <Loading /> : <Employees headerNames={headerNames} rows={employeeRows} />}
+						{isLoading ? <Loading /> : <EmployeeTable headerNames={headerNames} rows={employeeRows} />}
 					</Box>
 				</Accordion>
 			</Grid>
